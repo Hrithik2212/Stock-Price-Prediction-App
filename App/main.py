@@ -8,7 +8,8 @@ TODAY = date.today().strftime("%Y-%m-%d")
 
 st.title('Stock Forecast App')
 
-stocks_df = pd.read_csv('Data/Indian-Stock-Market.csv')
+url = 'https://raw.githubusercontent.com/Hrithik2212/Stock-Price-Prediction-App/master/App/Data/Indian-Stock-Market.csv'
+stocks_df = pd.read_csv(url)
 stocks = stocks_df.Name
 
 selected_stock = st.selectbox('Search for Stocks', stocks)
