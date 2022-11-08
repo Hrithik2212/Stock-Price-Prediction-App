@@ -1,0 +1,20 @@
+start 
+
+do{
+    INPUT <- Select Stock 
+    Backend:
+        Call Stock API 
+        Stock Data = API( Return Data ) 
+    OUTPUT : Plot( Data['Dates'] , Data ['Close'] ) 
+    OUTPUT : Statistical Description(Stock Data)
+    INPUT <- Select the number of days to forecast
+    Backend :
+        -> Train Machine Learning model ( Stock Data)
+        -> Predict the forecast 
+    
+    OUTPUT: Plot(x = Dates , y = [Orginal Data , Prediction] )
+    }
+}
+
+stop
+
